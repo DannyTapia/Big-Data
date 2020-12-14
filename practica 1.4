@@ -1,0 +1,60 @@
+#parte 1
+edad<-c(18,19,20,21,22,23,24,25,26,27)
+añonac<-c(2002,2001,2000,1999,1998,1997,1996,1995,1994,1995)
+tel<-c(3414302213,
+       1234567890,
+       0987654321,
+       5432109876,
+       1325364758,
+       0192837465,
+       5647382910,
+       0293847462,
+       1209348756,
+       1010292938)
+
+alumno<-matrix(c(edad,añonac,tel),
+               nrow=10, ncol=3)
+
+colnames(alumno)<-c("Edad","Año nacimiento","Telefono")
+alumno<-rbind(alumno,
+              c(mean(alumno[,1]),
+                   mean(alumno[,2]),
+                   mean(alumno[,3])))
+
+#parte 2
+nombre<-c("Ana","Bruno","Carlos","Daniel","Edgar",
+          "Fernanda","Gabriel","Hector","Ivanna","Jose","PROMEDIO")
+dimnames(alumno)<-list(nombre)
+
+alumno
+
+#Operaciones basica
+x1 = matrix(seq(from=1, to=6),
+          nrow = 2,
+          ncol = 3)
+x2 = matrix(seq(from=6, to=11),
+          nrow = 2,
+          ncol = 3)
+x1
+x2
+suma <-x1+x2
+suma
+
+resta <-x1-x2
+resta
+
+multi <-x1*x2
+multi
+
+divi <-x1/x2
+divi
+
+pote <-x1^3
+pote
+
+porce <-x2%%3
+porce
+
+
+
+

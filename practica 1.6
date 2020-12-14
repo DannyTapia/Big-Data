@@ -1,0 +1,44 @@
+Peso <- c(67,70,78,77,89,85,76,90,82,79,80,92,82,69,73,74,97,81,93,100)
+Altura <- c(1.60,1.78,1.89,1.90,1.65,1.67,1.70,1.95,1.75,1.78,
+            1.82,1.85,1.88,1.70,1.75,1.62,1.90,1.88,1.77,2.1)
+Sexo <- c("Masculino", "Masculino","Femenino","Masculino","Femenino",
+          "Femenino","Femanino","Masculino","Femenino","Masculino",
+          "Masculino","Masculino","Masculino","Femenino","Masculino",
+          "Femenino","Femenino","Masculino","Femenino","Masculino")
+IMC <-(Peso/Altura^2)
+
+#Data Frame
+Df <- data.frame(Peso,Altura,Sexo,IMC)
+
+Df
+
+#Peso Hombres
+Mascu <- Df[Df $Sexo=="Masculino",]
+Mascu
+mean(Mascu$Peso)
+
+#Peso Mujeres
+Feme <- Df[Df $Sexo=="Femenino",]
+Feme
+mean(Feme$Peso)
+
+#Peso total
+mean(Df$Peso)
+
+#Cambiar nombre
+
+rownames(Df) <-c("A","B","C","D","E","F","G","H",
+           "I","J","K","L","M","N","O","P",
+           "Q","R","S","T")
+Df
+
+#Grafica altura
+barplot(Df$Altura,main = "Grafica Altura",names.arg = row.names(Df)
+        ,xlab = "Pacientes", ylab = "Altura",border = "blue",col = "green" )
+
+
+
+
+#grafica sexo e IMC
+barplot(table(Df$Sexo,Df$IMC),main="Grafica Sexo e IMC",
+        xlab = "IMC", ylab = "Sexo", border = c("pink","green"),col = c("blue","purple"))

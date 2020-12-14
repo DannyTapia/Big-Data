@@ -1,0 +1,31 @@
+#factorial for
+iniciar <-Sys.time()
+valor <-7
+for(x in 1: (valor-1)){
+  if (valor ==0)
+    break
+  valor <- valor* x
+}
+print(valor)
+
+print(Sys.time()-iniciar)
+
+
+
+#factorial while
+inicio<- Sys.time()
+valor <-7
+x <-valor
+
+while (x>0){
+  valor <-valor*x
+  x <-x -1
+}
+print(valor)
+print(Sys.time()-inicio)
+
+
+
+
+
+
